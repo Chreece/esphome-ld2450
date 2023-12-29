@@ -19,7 +19,7 @@ DEPENDENCIES = ["ld2450"]
 CONFIG_SCHEMA = {
     cv.GenerateID(CONF_LD2450_ID): cv.use_id(LD2450),
     cv.Optional(CONF_HAS_TARGET): binary_sensor.binary_sensor_schema(
-        device_class=DEVICE_CLASS_OCCUPANCY,
+        device_class=DEVICE_CLASS_PRESENCE,
         icon=ICON_ACCOUNT,
     ),
     cv.Optional(CONF_HAS_MOVING_TARGET): binary_sensor.binary_sensor_schema(
@@ -27,7 +27,7 @@ CONFIG_SCHEMA = {
         icon=ICON_MOTION_SENSOR,
     ),
     cv.Optional(CONF_HAS_STILL_TARGET): binary_sensor.binary_sensor_schema(
-        device_class=DEVICE_CLASS_OCCUPANCY,
+        device_class=DEVICE_CLASS_PRESENCE,
         icon=ICON_MOTION_SENSOR,
     ),
     cv.Optional(CONF_PRESENCE_REGIONS): cv.ensure_list(
